@@ -55,4 +55,34 @@
       </content-type>
   </extension>
 
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            name="Batch (Batch Applications for the Java Platform)"
+            id="org.jboss.tools.batch.ui">
+      </category>
+
+      <wizard 
+         category="org.jboss.tools.batch.ui" 
+         class="org.jboss.tools.batch.ui.internal.wizard.NewBatchletWizard" 
+         icon="platform:/plugin/org.jboss.tools.batch.ui/images/batch_icon16.png"
+         id="org.jboss.tools.batch.ui.internal.wizard.NewBatchletWizard" 
+         name="Batchlet" 
+         project="false">
+         <description>
+            Create a Stereotype Annotation Type
+         </description>
+         <keywordReference
+               id="org.jboss.tools.batch.ui.newJava">
+         </keywordReference>
+      </wizard>
+
+  </extension>
+
+   <extension
+   		point="org.eclipse.ui.keywords">
+      <keyword
+            label="%preferenceKeywords.newJava"
+            id="org.jboss.tools.batch.ui.newJava"/>
+    </extension>
+
 </plugin>

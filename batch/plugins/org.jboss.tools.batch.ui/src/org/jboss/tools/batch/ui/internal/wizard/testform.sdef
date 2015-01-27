@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition>
+	<import>
+		<package>org.jboss.tools.batch.ui.editor.internal.wizard</package>
+	</import>
+	<form>
+		<id>TestForm</id>
+		<content>
+			<property-editor>
+				<scale-horizontally>true</scale-horizontally>
+				<property>Ref</property>
+			</property-editor>
+			<property-editor>
+				<scale-horizontally>true</scale-horizontally>
+				<property>Properties</property>
+			</property-editor>
+		</content>
+	</form>
+
+</definition>

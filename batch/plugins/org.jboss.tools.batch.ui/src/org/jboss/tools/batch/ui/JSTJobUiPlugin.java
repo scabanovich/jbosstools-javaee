@@ -10,6 +10,7 @@
  ************************************************************************************/
 package org.jboss.tools.batch.ui;
 
+import org.jboss.tools.foundation.core.plugin.log.IPluginLog;
 import org.jboss.tools.foundation.ui.plugin.BaseUIPlugin;
 
 public class JSTJobUiPlugin extends BaseUIPlugin {
@@ -22,6 +23,18 @@ public class JSTJobUiPlugin extends BaseUIPlugin {
 	
 	public static JSTJobUiPlugin getDefault() {
 		return plugin;
+	}
+
+	/**
+	 * Get the IPluginLog for this plugin. This method 
+	 * helps to make logging easier, for example:
+	 * 
+	 *     FoundationCorePlugin.pluginLog().logError(etc)
+	 *  
+	 * @return IPluginLog object
+	 */
+	public static IPluginLog pluginLog() {
+		return getDefault().pluginLogInternal();
 	}
 
 }
