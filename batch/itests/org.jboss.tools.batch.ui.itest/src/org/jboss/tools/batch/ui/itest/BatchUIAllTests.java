@@ -16,6 +16,9 @@ import junit.framework.TestSuite;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.jdt.internal.core.JavaModelManager;
 import org.eclipse.wst.validation.ValidationFramework;
+import org.jboss.tools.batch.ui.itest.ca.JobArtifactRefContentAssist;
+import org.jboss.tools.batch.ui.itest.ca.JobPropertyNameContentAssist;
+import org.jboss.tools.batch.ui.itest.ca.JobTransitionsContentAssist;
 import org.jboss.tools.test.util.ProjectImportTestSetup;
 import org.jboss.tools.test.util.ResourcesUtils;
 
@@ -39,12 +42,23 @@ public class BatchUIAllTests {
 		suite.addTestSuite(BatchEditorTest.class);
 
 		ProjectImportTestSetup testSetup = new ProjectImportTestSetup(suite,
-				"org.jboss.tools.batch.ui.itest",
+				"org.jboss.tools.batch.core.itest",
 				new String[]{"projects/TestProject"},
 				new String[]{"TestProject"});
 
 		suiteAll.addTest(testSetup);
 		
+		suite = new TestSuite("Content assist");
+		suite.addTestSuite(JobTransitionsContentAssist.class);
+		suite.addTestSuite(JobArtifactRefContentAssist.class);
+		suite.addTestSuite(JobPropertyNameContentAssist.class);
+
+		testSetup = new ProjectImportTestSetup(suite,
+				"org.jboss.tools.batch.core.itest",
+				new String[]{"projects/TestProject"},
+				new String[]{"TestProject"});
+		suiteAll.addTest(testSetup);
+
 		return suiteAll;
 	}
 }

@@ -19,8 +19,11 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.sapphire.ElementHandle;
 import org.eclipse.sapphire.ElementList;
 import org.eclipse.sapphire.ui.forms.swt.MasterDetailsEditorPage;
+import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.wst.sse.ui.StructuredTextEditor;
+import org.jboss.tools.batch.core.BatchArtifactType;
+import org.jboss.tools.batch.ui.JobImages;
 import org.jboss.tools.batch.ui.editor.internal.model.BatchletOrChunk;
 import org.jboss.tools.batch.ui.editor.internal.model.Chunk;
 import org.jboss.tools.batch.ui.editor.internal.model.FlowElement;
@@ -53,7 +56,7 @@ public class BatchEditorTest extends TestCase {
 	}
 
 	public void testEditor() {
-		 editor = openEditor("job.xml");
+		 editor = openEditor("src/META-INF/batch-jobs/job.xml");
 		 JobXMLEditor jobEditor = (JobXMLEditor)editor;
 
 		 Job job = jobEditor.getSchema();
@@ -84,5 +87,10 @@ public class BatchEditorTest extends TestCase {
 
 		assertTrue(editorPart instanceof JobXMLEditor);
 		return editorPart;
+	}
+
+	public void testImages() throws Exception {
+		Image image = JobImages.getImageDescriptorByElement(BatchArtifactType.BATCHLET).createImage(false);
+		assertNotNull(image);
 	}
 }

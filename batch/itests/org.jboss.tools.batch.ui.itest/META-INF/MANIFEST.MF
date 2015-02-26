@@ -7,10 +7,12 @@ Bundle-Vendor: JBoss by Red Hat
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Require-Bundle: org.junit,
  org.jboss.tools.tests,
+ org.jboss.tools.batch.core,
  org.jboss.tools.batch.ui,
  org.jboss.tools.common.model,
  org.jboss.tools.common.model.ui,
  org.jboss.tools.common.base.test,
+ org.jboss.tools.batch.core.itest,
  org.eclipse.core.resources,
  org.jboss.tools.common,
  org.eclipse.core.runtime,

@@ -10,8 +10,11 @@
  ************************************************************************************/
 package org.jboss.tools.batch.core;
 
+import java.util.Collection;
+
 import org.eclipse.jdt.core.IField;
 import org.jboss.tools.common.java.IAnnotationDeclaration;
+import org.jboss.tools.common.text.ITextSourceReference;
 
 /**
  * 
@@ -49,4 +52,11 @@ public interface IBatchProperty {
 	 * @return
 	 */
 	public IBatchArtifact getArtifact();
+
+	/**
+	 * 
+	 * 
+	 * @return
+	 */
+	public Collection<ITextSourceReference> getReferences();
 }
