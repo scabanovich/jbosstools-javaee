@@ -1,0 +1,12 @@
+lib/commons-beanutils-1.7.0.jar
+lib/commons-collections-3.1.jar
+lib/commons-digester-1.7.jar
+lib/commons-logging-1.0.4.jar
+lib/ejb3-persistence-1.0.1.GA.jar
+lib/javax.annotation-3.1.1.jar
+lib/jboss-ejb3x-4.2.1.GA.jar
+lib/jsf-api-1.1_02.jar
+lib/jsf-impl-1.1_02.jar
+lib/jstl-1.1.2.jar
+lib/standard-1.1.2.jar
+
